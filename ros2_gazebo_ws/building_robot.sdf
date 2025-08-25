@@ -1,0 +1,430 @@
+<?xml version="1.0" ?>
+<!-- 
+    SDF (Simulation Description Format) 파일: Gazebo 시뮬레이션용 로봇/환경 정의 파일
+    이 파일은 4륜 차량 로봇과 시뮬레이션 환경을 정의합니다.
+-->
+<sdf version="1.10">
+    <!-- 시뮬레이션 월드 정의 -->
+    <world name="car_world">
+        <!-- 물리 엔진 설정 -->
+        <physics name="1ms" type="ignored"> <!-- ignored 설정시 기본 물리엔진 사용 -->
+            <max_step_size>0.001</max_step_size>    <!-- 물리 시뮬레이션 최대 스텝 크기 (1ms) -->
+            <real_time_factor>1.0</real_time_factor> <!-- 실시간 배속 (1.0 = 실시간) -->
+        </physics>
+
+        <!-- 필수 시스템 플러그인들 -->
+        <!-- 물리 엔진 플러그인: 중력, 충돌, 관성 등 물리 법칙 적용 -->
+        <plugin
+            filename="gz-sim-physics-system"
+            name="gz::sim::systems::Physics">
+        </plugin>
+        
+        <!-- 사용자 명령 시스템: GUI를 통한 모델 조작 가능 -->
+        <plugin
+            filename="gz-sim-user-commands-system"
+            name="gz::sim::systems::UserCommands">
+        </plugin>
+        
+        <!-- 씬 브로드캐스터: 시각적 정보를 GUI에 전송 -->
+        <plugin
+            filename="gz-sim-scene-broadcaster-system"
+            name="gz::sim::systems::SceneBroadcaster">
+        </plugin>
+
+        <!-- 환경 조명 설정: 태양광 시뮬레이션 -->
+        <light type="directional" name="sun">
+            <cast_shadows>true</cast_shadows>               <!-- 그림자 생성 여부 -->
+            <pose>0 0 10 0 0 0</pose>                      <!-- 조명 위치 (x, y, z, roll, pitch, yaw) -->
+            <diffuse>0.8 0.8 0.8 1</diffuse>              <!-- 확산광 색상 (R, G, B, Alpha) -->
+            <specular>0.2 0.2 0.2 1</specular>            <!-- 반사광 색상 -->
+            <attenuation>                                   <!-- 조명 감쇠 설정 -->
+                <range>1000</range>                        <!-- 조명 범위 (미터) -->
+                <constant>0.9</constant>                   <!-- 상수 감쇠 -->
+                <linear>0.01</linear>                      <!-- 선형 감쇠 -->
+                <quadratic>0.001</quadratic>               <!-- 이차 감쇠 -->
+            </attenuation>
+            <direction>-0.5 0.1 -0.9</direction>           <!-- 조명 방향 벡터 -->
+        </light>
+
+        <!-- 지면 모델: 로봇이 움직일 바닥면 -->
+        <model name="ground_plane">
+            <static>true</static>                          <!-- 정적 모델 (물리적으로 고정) -->
+            <link name="link">
+                <!-- 충돌 감지용 지오메트리 -->
+                <collision name="collision">
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>         <!-- 평면의 법선 벡터 (위쪽 방향) -->
+                        </plane>
+                    </geometry>
+                </collision>
+                <!-- 시각적 표현용 지오메트리 -->
+                <visual name="visual">
+                    <geometry>
+                        <plane>
+                        <normal>0 0 1</normal>             <!-- 평면의 법선 벡터 -->
+                        <size>100 100</size>               <!-- 평면 크기 (100m x 100m) -->
+                        </plane>
+                    </geometry>
+                    <!-- 재질 속성 -->
+                    <material>
+                        <ambient>0.8 0.8 0.8 1</ambient>   <!-- 주변광 반사율 -->
+                        <diffuse>0.8 0.8 0.8 1</diffuse>   <!-- 확산 반사율 -->
+                        <specular>0.8 0.8 0.8 1</specular> <!-- 거울 반사율 -->
+                    </material>
+                </visual>
+            </link>
+        </model>
+
+        <!-- 
+            차량 로봇 모델 정의
+            canonical_link: 모델의 기준이 되는 링크 (보통 몸체)
+        -->
+        <model name='vehicle_blue' canonical_link='chassis'>
+            <pose relative_to='world'>0 0 0 0 0 0</pose>   <!-- 월드 좌표계 기준 모델 위치 -->
+
+            <!-- 차량 섀시(몸체) 링크 정의 -->
+            <link name='chassis'>
+                <!-- 모델 좌표계 기준 섀시 위치: 앞으로 0.5m, 위로 0.4m -->
+                <pose relative_to='__model__'>0.5 0 0.4 0 0 0</pose>
+                
+                <!-- 관성 속성: 물리 시뮬레이션을 위한 질량과 관성 텐서 -->
+                <inertial>
+                    <mass>1.14395</mass>                   <!-- 질량 (kg) -->
+                    <inertia>                              <!-- 관성 텐서 (kg⋅m²) -->
+                        <ixx>0.095329</ixx>               <!-- X축 회전 관성 -->
+                        <ixy>0</ixy>                      <!-- XY 교차 관성 -->
+                        <ixz>0</ixz>                      <!-- XZ 교차 관성 -->
+                        <iyy>0.381317</iyy>               <!-- Y축 회전 관성 -->
+                        <iyz>0</iyz>                      <!-- YZ 교차 관성 -->
+                        <izz>0.476646</izz>               <!-- Z축 회전 관성 -->
+                    </inertia>
+                </inertial>
+                
+                <!-- 시각적 표현: 렌더링을 위한 모양과 색상 -->
+                <visual name='visual'>
+                    <geometry>
+                        <box>
+                            <size>2.0 1.0 0.5</size>      <!-- 박스 크기: 길이 2m, 폭 1m, 높이 0.5m -->
+                        </box>
+                    </geometry>
+                    <!-- 재질 색상: 파란색 섀시 -->
+                    <material>
+                        <ambient>0.0 0.0 1.0 1</ambient>  <!-- 주변광: 파란색 -->
+                        <diffuse>0.0 0.0 1.0 1</diffuse>  <!-- 확산광: 파란색 -->
+                        <specular>0.0 0.0 1.0 1</specular><!-- 반사광: 파란색 -->
+                    </material>
+                </visual>
+                
+                <!-- 충돌 감지: 물리적 상호작용을 위한 형상 -->
+                <collision name='collision'>
+                    <geometry>
+                        <box>
+                            <size>2.0 1.0 0.5</size>      <!-- 시각적 표현과 동일한 크기 -->
+                        </box>
+                    </geometry>
+                </collision>
+            </link>
+
+            <!-- 왼쪽 바퀴 링크 정의 -->
+            <link name='left_wheel'>
+                <!-- 
+                    섀시 기준 바퀴 위치: 뒤로 0.5m, 왼쪽으로 0.6m
+                    회전: X축 기준 -90도 회전 (-1.5707 라디안 = -90도)
+                -->
+                <pose relative_to="chassis">-0.5 0.6 0 -1.5707 0 0</pose>
+                
+                <!-- 바퀴의 관성 속성 -->
+                <inertial>
+                    <mass>1</mass>                         <!-- 바퀴 질량 1kg -->
+                    <inertia>
+                        <ixx>0.043333</ixx>               <!-- 원통형 바퀴의 관성 모멘트 -->
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>0.043333</iyy>
+                        <iyz>0</iyz>
+                        <izz>0.08</izz>                   <!-- Z축(회전축) 관성 모멘트 -->
+                    </inertia>
+                </inertial>
+                
+                <!-- 시각적 표현: 원통형 빨간색 바퀴 -->
+                <visual name='visual'>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>          <!-- 바퀴 반지름 0.4m -->
+                            <length>0.2</length>          <!-- 바퀴 두께 0.2m -->
+                        </cylinder>
+                    </geometry>
+                    <!-- 재질 색상: 빨간색 바퀴 -->
+                    <material>
+                        <ambient>1.0 0.0 0.0 1</ambient>  <!-- 주변광: 빨간색 -->
+                        <diffuse>1.0 0.0 0.0 1</diffuse>  <!-- 확산광: 빨간색 -->
+                        <specular>1.0 0.0 0.0 1</specular><!-- 반사광: 빨간색 -->
+                    </material>
+                </visual>
+                
+                <!-- 충돌 감지: 바퀴와 지면 간의 물리적 접촉 -->
+                <collision name='collision'>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>          <!-- 시각적 표현과 동일한 크기 -->
+                            <length>0.2</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+            
+            <!-- 오른쪽 바퀴 링크 정의 (왼쪽 바퀴와 동일하지만 위치만 다름) -->
+            <link name='right_wheel'>
+                <!-- 
+                    섀시 기준 바퀴 위치: 뒤로 0.5m, 오른쪽으로 0.6m
+                    Y좌표가 -0.6 (음수)이므로 오른쪽에 위치
+                -->
+                <pose relative_to="chassis">-0.5 -0.6 0 -1.5707 0 0</pose>
+                
+                <!-- 바퀴의 관성 속성 (왼쪽 바퀴와 동일) -->
+                <inertial>
+                    <mass>1</mass>
+                    <inertia>
+                        <ixx>0.043333</ixx>
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>0.043333</iyy>
+                        <iyz>0</iyz>
+                        <izz>0.08</izz>
+                    </inertia>
+                </inertial>
+                
+                <!-- 시각적 표현: 원통형 빨간색 바퀴 -->
+                <visual name='visual'>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>
+                            <length>0.2</length>
+                        </cylinder>
+                    </geometry>
+                    <material>
+                        <ambient>1.0 0.0 0.0 1</ambient>
+                        <diffuse>1.0 0.0 0.0 1</diffuse>
+                        <specular>1.0 0.0 0.0 1</specular>
+                    </material>
+                </visual>
+                
+                <!-- 충돌 감지 -->
+                <collision name='collision'>
+                    <geometry>
+                        <cylinder>
+                            <radius>0.4</radius>
+                            <length>0.2</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+            </link>
+
+            <!-- 
+                캐스터 바퀴 프레임 정의
+                attached_to: 섀시에 부착된 좌표계
+                캐스터는 차량의 균형을 맞추는 보조 바퀴 역할
+            -->
+            <frame name="caster_frame" attached_to='chassis'>
+                <!-- 섀시 앞쪽(0.8m), 아래쪽(-0.2m)에 위치 -->
+                <pose>0.8 0 -0.2 0 0 0</pose>
+            </frame>
+
+            <!-- 캐스터(보조바퀴) 링크 정의 -->
+            <link name='caster'>
+                <pose relative_to='caster_frame'/>         <!-- 캐스터 프레임 기준 위치 -->
+                
+                <!-- 캐스터의 관성 속성 -->
+                <inertial>
+                    <mass>1</mass>                         <!-- 캐스터 질량 1kg -->
+                    <inertia>                              <!-- 구형 캐스터의 관성 모멘트 -->
+                        <ixx>0.016</ixx>                  <!-- 구의 관성 모멘트: (2/5)mr² -->
+                        <ixy>0</ixy>
+                        <ixz>0</ixz>
+                        <iyy>0.016</iyy>
+                        <iyz>0</iyz>
+                        <izz>0.016</izz>
+                    </inertia>
+                </inertial>
+                
+                <!-- 시각적 표현: 구형 초록색 캐스터 -->
+                <visual name='visual'>
+                    <geometry>
+                        <sphere>
+                            <radius>0.2</radius>          <!-- 캐스터 반지름 0.2m -->
+                        </sphere>
+                    </geometry>
+                    <!-- 재질 색상: 초록색 캐스터 -->
+                    <material>
+                        <ambient>0.0 1 0.0 1</ambient>    <!-- 주변광: 초록색 -->
+                        <diffuse>0.0 1 0.0 1</diffuse>    <!-- 확산광: 초록색 -->
+                        <specular>0.0 1 0.0 1</specular>  <!-- 반사광: 초록색 -->
+                    </material>
+                </visual>
+                
+                <!-- 충돌 감지: 캐스터와 지면 간의 접촉 -->
+                <collision name='collision'>
+                    <geometry>
+                        <sphere>
+                            <radius>0.2</radius>          <!-- 시각적 표현과 동일한 크기 -->
+                        </sphere>
+                    </geometry>
+                </collision>
+            </link>
+
+            <!-- 
+                조인트 정의: 링크들 간의 연결과 운동 제약 조건
+                revolute: 회전 조인트 (바퀴가 축을 중심으로 회전)
+            -->
+            
+            <!-- 왼쪽 바퀴 회전 조인트 -->
+            <joint name='left_wheel_joint' type='revolute'>
+                <pose relative_to='left_wheel'/>           <!-- 왼쪽 바퀴 기준 조인트 위치 -->
+                <parent>chassis</parent>                   <!-- 부모 링크: 섀시 -->
+                <child>left_wheel</child>                  <!-- 자식 링크: 왼쪽 바퀴 -->
+                <axis>
+                    <!-- 회전축 정의: Y축(0 1 0) 방향으로 회전 -->
+                    <xyz expressed_in='__model__'>0 1 0</xyz>
+                    <limit>
+                        <lower>-1.79769e+308</lower>      <!-- 회전 하한: 무한대 (제한 없음) -->
+                        <upper>1.79769e+308</upper>       <!-- 회전 상한: 무한대 (제한 없음) -->
+                    </limit>
+                </axis>
+            </joint>
+
+            <!-- 오른쪽 바퀴 회전 조인트 (왼쪽과 동일한 설정) -->
+            <joint name='right_wheel_joint' type='revolute'>
+                <pose relative_to='right_wheel'/>
+                <parent>chassis</parent>
+                <child>right_wheel</child>
+                <axis>
+                    <xyz expressed_in='__model__'>0 1 0</xyz>
+                    <limit>
+                        <lower>-1.79769e+308</lower>
+                        <upper>1.79769e+308</upper>
+                    </limit>
+                </axis>
+            </joint>
+
+            <!-- 
+                캐스터 볼 조인트
+                ball: 구 조인트 (모든 방향으로 자유롭게 회전)
+                캐스터가 지면에 따라 자유롭게 굴러갈 수 있도록 함
+            -->
+            <joint name='caster_wheel' type='ball'>
+                <parent>chassis</parent>                   <!-- 부모: 섀시 -->
+                <child>caster</child>                      <!-- 자식: 캐스터 -->
+            </joint>
+
+            <!-- 
+                차동 구동 시스템 플러그인
+                DiffDrive: 두 바퀴의 속도 차이로 차량을 제어하는 시스템
+                ROS2의 cmd_vel 토픽을 받아서 바퀴 회전으로 변환
+            -->
+            <plugin
+                filename="gz-sim-diff-drive-system"
+                name="gz::sim::systems::DiffDrive">
+                <left_joint>left_wheel_joint</left_joint>      <!-- 왼쪽 바퀴 조인트 연결 -->
+                <right_joint>right_wheel_joint</right_joint>   <!-- 오른쪽 바퀴 조인트 연결 -->
+                <wheel_separation>1.2</wheel_separation>       <!-- 바퀴 간 거리 (1.2m) -->
+                <wheel_radius>0.4</wheel_radius>               <!-- 바퀴 반지름 (0.4m) -->
+                <odom_publish_frequency>1</odom_publish_frequency> <!-- 오도메트리 발행 빈도 (1Hz) -->
+                <topic>cmd_vel</topic>                         <!-- 속도 명령 토픽 이름 -->
+            </plugin>
+
+            <!-- 
+                키보드 입력 처리 플러그인들
+                TriggeredPublisher: 특정 입력에 반응하여 메시지를 발행
+                키보드 방향키로 로봇을 제어할 수 있도록 함
+            -->
+
+            <!-- 위쪽 화살표 키 (↑): 전진 -->
+            <plugin filename="gz-sim-triggered-publisher-system"
+                    name="gz::sim::systems::TriggeredPublisher">
+                <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+                    <match field="data">16777235</match>       <!-- Qt::Key_Up = 16777235 -->
+                </input>
+                <output type="gz.msgs.Twist" topic="/cmd_vel">
+                        linear: {x: 0.5}, angular: {z: 0.0}   <!-- 직진: x축 0.5m/s -->
+                </output>
+            </plugin>
+
+            <!-- 왼쪽 화살표 키 (←): 좌회전 -->
+            <plugin filename="gz-sim-triggered-publisher-system"
+                    name="gz::sim::systems::TriggeredPublisher">
+                <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+                    <match field="data">16777234</match>       <!-- Qt::Key_Left = 16777234 -->
+                </input>
+                <output type="gz.msgs.Twist" topic="/cmd_vel">
+                    linear: {x: 0.0}, angular: {z: 0.5}       <!-- 좌회전: z축 0.5rad/s -->
+                </output>
+            </plugin>
+
+            <!-- 아래쪽 화살표 키 (↓): 후진 -->
+            <plugin filename="gz-sim-triggered-publisher-system"
+                    name="gz::sim::systems::TriggeredPublisher">
+                <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+                    <match field="data">16777237</match>       <!-- Qt::Key_Down = 16777237 -->
+                </input>
+                <output type="gz.msgs.Twist" topic="/cmd_vel">
+                    linear: {x: -0.5}, angular: {z: 0.0}      <!-- 후진: x축 -0.5m/s -->
+                </output>
+            </plugin>
+
+            <!-- 오른쪽 화살표 키 (→): 우회전 -->
+            <plugin filename="gz-sim-triggered-publisher-system"
+                    name="gz::sim::systems::TriggeredPublisher">
+                <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+                    <match field="data">16777236</match>       <!-- Qt::Key_Right = 16777236 -->
+                </input>
+                <output type="gz.msgs.Twist" topic="/cmd_vel">
+                    linear: {x: 0.0}, angular: {z: -0.5}      <!-- 우회전: z축 -0.5rad/s -->
+                </output>
+            </plugin>
+
+            <!-- S 키: 정지 -->
+            <plugin filename="gz-sim-triggered-publisher-system"
+                    name="gz::sim::systems::TriggeredPublisher">
+            <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+                <match field="data">83</match>                <!-- Qt::Key_S = 83 -->
+            </input>
+            <output type="gz.msgs.Twist" topic="/cmd_vel">
+                linear: {x: 0.0}, angular: {z: 0.0}           <!-- 정지: 모든 속도 0 -->
+            </output>
+            </plugin>
+
+        </model>
+    </world>
+</sdf>
+
+<!-- 
+    ===== 차량 로봇 SDF 파일 요약 =====
+    
+    이 파일의 구조:
+    1. 월드 설정 (물리 엔진, 필수 플러그인들)
+    2. 환경 요소 (조명, 지면)
+    3. 차량 모델
+       - 섀시 (파란색 박스)
+       - 왼쪽/오른쪽 바퀴 (빨간색 원통)
+       - 캐스터 (초록색 구형 보조바퀴)
+    4. 조인트 (링크들 간의 연결)
+       - 바퀴 회전 조인트 (revolute)
+       - 캐스터 볼 조인트 (ball)
+    5. 플러그인들
+       - DiffDrive: 차동 구동 시스템
+       - TriggeredPublisher: 키보드 입력 처리
+    
+    제어 방법:
+    - ↑ (Up): 전진 (0.5 m/s)
+    - ↓ (Down): 후진 (-0.5 m/s)  
+    - ← (Left): 좌회전 (0.5 rad/s)
+    - → (Right): 우회전 (-0.5 rad/s)
+    - S: 정지 (0 m/s, 0 rad/s)
+    
+    물리적 특성:
+    - 섀시: 2m x 1m x 0.5m, 질량 1.14kg
+    - 바퀴: 반지름 0.4m, 두께 0.2m, 질량 1kg
+    - 캐스터: 반지름 0.2m, 질량 1kg
+    - 바퀴 간격: 1.2m
+-->
