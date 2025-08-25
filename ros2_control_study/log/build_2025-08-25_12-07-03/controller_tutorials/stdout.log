@@ -1,0 +1,30 @@
+running egg_info
+writing ../../build/controller_tutorials/controller_tutorials.egg-info/PKG-INFO
+writing dependency_links to ../../build/controller_tutorials/controller_tutorials.egg-info/dependency_links.txt
+writing entry points to ../../build/controller_tutorials/controller_tutorials.egg-info/entry_points.txt
+writing requirements to ../../build/controller_tutorials/controller_tutorials.egg-info/requires.txt
+writing top-level names to ../../build/controller_tutorials/controller_tutorials.egg-info/top_level.txt
+reading manifest file '../../build/controller_tutorials/controller_tutorials.egg-info/SOURCES.txt'
+writing manifest file '../../build/controller_tutorials/controller_tutorials.egg-info/SOURCES.txt'
+running build
+running build_py
+copying controller_tutorials/move_turtle.py -> /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib/controller_tutorials
+copying controller_tutorials/qmonitor_for_pose_dual_controller.py -> /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib/controller_tutorials
+running install
+running install_lib
+copying /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib/controller_tutorials/move_turtle.py -> /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials
+copying /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib/controller_tutorials/qmonitor_for_pose_dual_controller.py -> /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials
+byte-compiling /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials/move_turtle.py to move_turtle.cpython-312.pyc
+byte-compiling /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials/qmonitor_for_pose_dual_controller.py to qmonitor_for_pose_dual_controller.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/controller_tutorials/controller_tutorials.egg-info to /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials-0.0.0-py3.12.egg-info
+running install_scripts
+Installing control_apps script to /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/controller_tutorials
+Installing control_rotate script to /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/controller_tutorials
+Installing move_turtle script to /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/controller_tutorials
+Installing pose_dual_controller script to /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/controller_tutorials
+Installing qmonitor_for_pose_dual_controller script to /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/controller_tutorials
+Installing simple_rotate script to /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/controller_tutorials
+writing list of installed files to '/home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/install.log'

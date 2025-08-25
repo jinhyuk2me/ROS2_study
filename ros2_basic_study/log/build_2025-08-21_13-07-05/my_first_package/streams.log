@@ -1,0 +1,49 @@
+[0.656s] Invoking command in '/home/jinhyuk2me/ros_ws/src/my_first_package': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jinhyuk2me/ros_ws/build/my_first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_first_package build --build-base /home/jinhyuk2me/ros_ws/build/my_first_package/build install --record /home/jinhyuk2me/ros_ws/build/my_first_package/install.log --single-version-externally-managed install_data
+[0.873s] running egg_info
+[0.873s] creating ../../build/my_first_package/my_first_package.egg-info
+[0.889s] writing ../../build/my_first_package/my_first_package.egg-info/PKG-INFO
+[0.889s] writing dependency_links to ../../build/my_first_package/my_first_package.egg-info/dependency_links.txt
+[0.889s] writing entry points to ../../build/my_first_package/my_first_package.egg-info/entry_points.txt
+[0.890s] writing requirements to ../../build/my_first_package/my_first_package.egg-info/requires.txt
+[0.890s] writing top-level names to ../../build/my_first_package/my_first_package.egg-info/top_level.txt
+[0.890s] writing manifest file '../../build/my_first_package/my_first_package.egg-info/SOURCES.txt'
+[0.924s] reading manifest file '../../build/my_first_package/my_first_package.egg-info/SOURCES.txt'
+[0.924s] writing manifest file '../../build/my_first_package/my_first_package.egg-info/SOURCES.txt'
+[0.924s] running build
+[0.925s] running build_py
+[0.925s] creating /home/jinhyuk2me/ros_ws/build/my_first_package/build
+[0.925s] creating /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib
+[0.925s] creating /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package
+[0.925s] copying my_first_package/my_first_node.py -> /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package
+[0.925s] copying my_first_package/my_publisher.py -> /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package
+[0.925s] copying my_first_package/test_message.py -> /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package
+[0.925s] copying my_first_package/__init__.py -> /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package
+[0.926s] copying my_first_package/my_subscriber.py -> /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package
+[0.926s] running install
+[0.932s] running install_lib
+[0.950s] creating /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package
+[0.950s] copying /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package/my_first_node.py -> /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package
+[0.950s] copying /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package/my_publisher.py -> /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package
+[0.950s] copying /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package/test_message.py -> /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package
+[0.950s] copying /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package/__init__.py -> /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package
+[0.950s] copying /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package/my_subscriber.py -> /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package
+[0.951s] byte-compiling /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package/my_first_node.py to my_first_node.cpython-312.pyc
+[0.951s] byte-compiling /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package/my_publisher.py to my_publisher.cpython-312.pyc
+[0.951s] byte-compiling /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package/test_message.py to test_message.cpython-312.pyc
+[0.952s] byte-compiling /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package/__init__.py to __init__.cpython-312.pyc
+[0.952s] byte-compiling /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package/my_subscriber.py to my_subscriber.cpython-312.pyc
+[0.952s] running install_data
+[0.952s] creating /home/jinhyuk2me/ros_ws/install/my_first_package/share/ament_index
+[0.952s] creating /home/jinhyuk2me/ros_ws/install/my_first_package/share/ament_index/resource_index
+[0.953s] creating /home/jinhyuk2me/ros_ws/install/my_first_package/share/ament_index/resource_index/packages
+[0.953s] copying resource/my_first_package -> /home/jinhyuk2me/ros_ws/install/my_first_package/share/ament_index/resource_index/packages
+[0.953s] copying package.xml -> /home/jinhyuk2me/ros_ws/install/my_first_package/share/my_first_package
+[0.953s] running install_egg_info
+[0.971s] Copying ../../build/my_first_package/my_first_package.egg-info to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package-0.0.0-py3.12.egg-info
+[0.972s] running install_scripts
+[1.080s] Installing my_first_node script to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/my_first_package
+[1.080s] Installing test_message script to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/my_first_package
+[1.080s] Installing turtlesim_publisher script to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/my_first_package
+[1.080s] Installing turtlesim_subscriber script to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/my_first_package
+[1.080s] writing list of installed files to '/home/jinhyuk2me/ros_ws/build/my_first_package/install.log'
+[1.099s] Invoked command in '/home/jinhyuk2me/ros_ws/src/my_first_package' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jinhyuk2me/ros_ws/build/my_first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_first_package build --build-base /home/jinhyuk2me/ros_ws/build/my_first_package/build install --record /home/jinhyuk2me/ros_ws/build/my_first_package/install.log --single-version-externally-managed install_data

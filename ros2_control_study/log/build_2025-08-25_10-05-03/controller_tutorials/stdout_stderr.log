@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/controller_tutorials/controller_tutorials.egg-info
+writing ../../build/controller_tutorials/controller_tutorials.egg-info/PKG-INFO
+writing dependency_links to ../../build/controller_tutorials/controller_tutorials.egg-info/dependency_links.txt
+writing entry points to ../../build/controller_tutorials/controller_tutorials.egg-info/entry_points.txt
+writing requirements to ../../build/controller_tutorials/controller_tutorials.egg-info/requires.txt
+writing top-level names to ../../build/controller_tutorials/controller_tutorials.egg-info/top_level.txt
+writing manifest file '../../build/controller_tutorials/controller_tutorials.egg-info/SOURCES.txt'
+reading manifest file '../../build/controller_tutorials/controller_tutorials.egg-info/SOURCES.txt'
+writing manifest file '../../build/controller_tutorials/controller_tutorials.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build
+creating /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib
+creating /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib/controller_tutorials
+copying controller_tutorials/__init__.py -> /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib/controller_tutorials
+copying controller_tutorials/simple_rotate.py -> /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib/controller_tutorials
+running install
+running install_lib
+creating /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials
+copying /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib/controller_tutorials/__init__.py -> /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials
+copying /home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/build/lib/controller_tutorials/simple_rotate.py -> /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials
+byte-compiling /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials/simple_rotate.py to simple_rotate.cpython-312.pyc
+running install_data
+creating /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/share/ament_index
+creating /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/share/ament_index/resource_index
+creating /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/share/ament_index/resource_index/packages
+copying resource/controller_tutorials -> /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/share/ament_index/resource_index/packages
+copying package.xml -> /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/share/controller_tutorials
+running install_egg_info
+Copying ../../build/controller_tutorials/controller_tutorials.egg-info to /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/python3.12/site-packages/controller_tutorials-0.0.0-py3.12.egg-info
+running install_scripts
+Installing simple_rotate script to /home/jinhyuk2me/ros_ws/ros2_control_study/install/controller_tutorials/lib/controller_tutorials
+writing list of installed files to '/home/jinhyuk2me/ros_ws/ros2_control_study/build/controller_tutorials/install.log'

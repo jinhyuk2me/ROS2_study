@@ -1,0 +1,28 @@
+[0.717s] Invoking command in '/home/jinhyuk2me/ros_ws/src/my_first_package': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jinhyuk2me/ros_ws/build/my_first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_first_package build --build-base /home/jinhyuk2me/ros_ws/build/my_first_package/build install --record /home/jinhyuk2me/ros_ws/build/my_first_package/install.log --single-version-externally-managed install_data
+[0.935s] running egg_info
+[0.951s] writing ../../build/my_first_package/my_first_package.egg-info/PKG-INFO
+[0.951s] writing dependency_links to ../../build/my_first_package/my_first_package.egg-info/dependency_links.txt
+[0.951s] writing entry points to ../../build/my_first_package/my_first_package.egg-info/entry_points.txt
+[0.951s] writing requirements to ../../build/my_first_package/my_first_package.egg-info/requires.txt
+[0.951s] writing top-level names to ../../build/my_first_package/my_first_package.egg-info/top_level.txt
+[0.988s] reading manifest file '../../build/my_first_package/my_first_package.egg-info/SOURCES.txt'
+[0.988s] writing manifest file '../../build/my_first_package/my_first_package.egg-info/SOURCES.txt'
+[0.988s] running build
+[0.988s] running build_py
+[0.989s] copying my_first_package/turtle_cmd_and_pose.py -> /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package
+[0.989s] running install
+[0.994s] running install_lib
+[1.010s] copying /home/jinhyuk2me/ros_ws/build/my_first_package/build/lib/my_first_package/turtle_cmd_and_pose.py -> /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package
+[1.011s] byte-compiling /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package/turtle_cmd_and_pose.py to turtle_cmd_and_pose.cpython-312.pyc
+[1.011s] running install_data
+[1.011s] running install_egg_info
+[1.029s] removing '/home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package-0.0.0-py3.12.egg-info' (and everything under it)
+[1.029s] Copying ../../build/my_first_package/my_first_package.egg-info to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages/my_first_package-0.0.0-py3.12.egg-info
+[1.029s] running install_scripts
+[1.142s] Installing my_first_node script to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/my_first_package
+[1.142s] Installing test_message script to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/my_first_package
+[1.142s] Installing turtle_cmd_pose script to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/my_first_package
+[1.142s] Installing turtlesim_publisher script to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/my_first_package
+[1.142s] Installing turtlesim_subscriber script to /home/jinhyuk2me/ros_ws/install/my_first_package/lib/my_first_package
+[1.143s] writing list of installed files to '/home/jinhyuk2me/ros_ws/build/my_first_package/install.log'
+[1.161s] Invoked command in '/home/jinhyuk2me/ros_ws/src/my_first_package' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jinhyuk2me/ros_ws/build/my_first_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jinhyuk2me/ros_ws/install/my_first_package/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_first_package build --build-base /home/jinhyuk2me/ros_ws/build/my_first_package/build install --record /home/jinhyuk2me/ros_ws/build/my_first_package/install.log --single-version-externally-managed install_data
