@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+b71d9ebc987616351722b2840b853360 CMakeFiles/pinky_navigation_uninstall

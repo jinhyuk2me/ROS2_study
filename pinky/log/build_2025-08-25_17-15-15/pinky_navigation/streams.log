@@ -1,0 +1,37 @@
+[0.021s] Invoking command in '/home/jinhyuk2me/ros_ws/pinky/build/pinky_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/jinhyuk2me/ros_ws/pinky/build/pinky_navigation -- -j12 -l12
+[0.190s] Invoked command in '/home/jinhyuk2me/ros_ws/pinky/build/pinky_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --build /home/jinhyuk2me/ros_ws/pinky/build/pinky_navigation -- -j12 -l12
+[0.200s] Invoking command in '/home/jinhyuk2me/ros_ws/pinky/build/pinky_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/jinhyuk2me/ros_ws/pinky/build/pinky_navigation
+[0.207s] -- Install configuration: ""
+[0.207s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/launch
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/launch/bringup_launch.xml
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/launch/localization_only_launch.xml
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/launch/map_building.launch.xml
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/launch/cartographer.launch.xml
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/launch/localization_launch.xml
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/launch/navigation_launch.xml
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/launch/map_view.launch.xml
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/launch/nav2_view.launch.xml
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/params
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/params/nav2_params.yaml
+[0.208s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/params/cartographer_params.lua
+[0.209s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/params/amcl_params.yaml
+[0.209s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/params/mapper_params.yaml
+[0.209s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/rviz
+[0.209s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/rviz/map_view.rviz
+[0.209s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/rviz/nav2_view.rviz
+[0.209s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/ament_index/resource_index/package_run_dependencies/pinky_navigation
+[0.209s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/ament_index/resource_index/parent_prefix_path/pinky_navigation
+[0.209s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/environment/ament_prefix_path.sh
+[0.210s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/environment/ament_prefix_path.dsv
+[0.210s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/environment/path.sh
+[0.210s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/environment/path.dsv
+[0.212s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/local_setup.bash
+[0.212s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/local_setup.sh
+[0.212s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/local_setup.zsh
+[0.212s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/local_setup.dsv
+[0.212s] -- Installing: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/package.dsv
+[0.212s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/ament_index/resource_index/packages/pinky_navigation
+[0.212s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/cmake/pinky_navigationConfig.cmake
+[0.212s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/cmake/pinky_navigationConfig-version.cmake
+[0.212s] -- Up-to-date: /home/jinhyuk2me/ros_ws/pinky/install/pinky_navigation/share/pinky_navigation/package.xml
+[0.214s] Invoked command in '/home/jinhyuk2me/ros_ws/pinky/build/pinky_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/cmake --install /home/jinhyuk2me/ros_ws/pinky/build/pinky_navigation

@@ -1,0 +1,9 @@
+/home/jinhyuk2me/ros_ws/pinky/build/pinky_description/CMakeFiles/uninstall.dir
+/home/jinhyuk2me/ros_ws/pinky/build/pinky_description/CMakeFiles/pinky_description_uninstall.dir
+/home/jinhyuk2me/ros_ws/pinky/build/pinky_description/CMakeFiles/test.dir
+/home/jinhyuk2me/ros_ws/pinky/build/pinky_description/CMakeFiles/edit_cache.dir
+/home/jinhyuk2me/ros_ws/pinky/build/pinky_description/CMakeFiles/rebuild_cache.dir
+/home/jinhyuk2me/ros_ws/pinky/build/pinky_description/CMakeFiles/list_install_components.dir
+/home/jinhyuk2me/ros_ws/pinky/build/pinky_description/CMakeFiles/install.dir
+/home/jinhyuk2me/ros_ws/pinky/build/pinky_description/CMakeFiles/install/local.dir
+/home/jinhyuk2me/ros_ws/pinky/build/pinky_description/CMakeFiles/install/strip.dir

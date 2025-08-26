@@ -1,0 +1,39 @@
+[0.817s] Invoking command in '/home/jinhyuk2me/ros_ws/pinky/src/pinky_simple_navigator': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pinky_simple_navigator build --build-base /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/build install --record /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/install.log --single-version-externally-managed install_data
+[1.082s] running egg_info
+[1.083s] creating ../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info
+[1.103s] writing ../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info/PKG-INFO
+[1.104s] writing dependency_links to ../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info/dependency_links.txt
+[1.104s] writing entry points to ../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info/entry_points.txt
+[1.104s] writing requirements to ../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info/requires.txt
+[1.104s] writing top-level names to ../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info/top_level.txt
+[1.104s] writing manifest file '../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info/SOURCES.txt'
+[1.148s] reading manifest file '../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info/SOURCES.txt'
+[1.148s] writing manifest file '../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info/SOURCES.txt'
+[1.148s] running build
+[1.148s] running build_py
+[1.148s] creating /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/build
+[1.149s] creating /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/build/lib
+[1.149s] creating /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/build/lib/pinky_simple_navigator
+[1.149s] copying pinky_simple_navigator/simple_navigator.py -> /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/build/lib/pinky_simple_navigator
+[1.149s] copying pinky_simple_navigator/__init__.py -> /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/build/lib/pinky_simple_navigator
+[1.149s] running install
+[1.154s] running install_lib
+[1.175s] creating /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/lib/python3.12/site-packages/pinky_simple_navigator
+[1.175s] copying /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/build/lib/pinky_simple_navigator/simple_navigator.py -> /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/lib/python3.12/site-packages/pinky_simple_navigator
+[1.175s] copying /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/build/lib/pinky_simple_navigator/__init__.py -> /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/lib/python3.12/site-packages/pinky_simple_navigator
+[1.175s] byte-compiling /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/lib/python3.12/site-packages/pinky_simple_navigator/simple_navigator.py to simple_navigator.cpython-312.pyc
+[1.177s] byte-compiling /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/lib/python3.12/site-packages/pinky_simple_navigator/__init__.py to __init__.cpython-312.pyc
+[1.177s] running install_data
+[1.177s] creating /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/share/ament_index
+[1.177s] creating /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/share/ament_index/resource_index
+[1.177s] creating /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/share/ament_index/resource_index/packages
+[1.177s] copying resource/pinky_simple_navigator -> /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/share/ament_index/resource_index/packages
+[1.177s] copying package.xml -> /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/share/pinky_simple_navigator
+[1.178s] creating /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/share/pinky_simple_navigator/launch
+[1.178s] copying launch/simple_drive.launch.xml -> /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/share/pinky_simple_navigator/launch
+[1.178s] running install_egg_info
+[1.201s] Copying ../../build/pinky_simple_navigator/pinky_simple_navigator.egg-info to /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/lib/python3.12/site-packages/pinky_simple_navigator-0.0.0-py3.12.egg-info
+[1.202s] running install_scripts
+[1.337s] Installing simple_navigator script to /home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/lib/pinky_simple_navigator
+[1.337s] writing list of installed files to '/home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/install.log'
+[1.357s] Invoked command in '/home/jinhyuk2me/ros_ws/pinky/src/pinky_simple_navigator' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(ros_venv) \[\e[1;34m\](ID: ${ROS_DOMAIN_ID:-0})\[\e[1;32m\]\u\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ PYTHONPATH=/home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jinhyuk2me/ros_ws/pinky/install/pinky_simple_navigator/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(ros_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pinky_simple_navigator build --build-base /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/build install --record /home/jinhyuk2me/ros_ws/pinky/build/pinky_simple_navigator/install.log --single-version-externally-managed install_data
